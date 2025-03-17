@@ -16,6 +16,9 @@ const config: NextConfig = {
     { source: "/health", destination: "/api/health" },
     { source: "/ping", destination: "/api/health" },
   ],
+  images: {
+    domains: ["*"], // ✅ อนุญาตให้โหลดรูปจาก ptcdn.info
+  },
 }
 
 export default env.ANALYZE ? withBundleAnalyzer({ enabled: env.ANALYZE })(config) : config
